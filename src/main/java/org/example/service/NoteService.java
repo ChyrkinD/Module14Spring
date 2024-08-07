@@ -30,6 +30,8 @@ public class NoteService {
 
     public void update(Note note){
         Note noteForUpdate = getById(note.getId());
+        notes.get(notes.indexOf(noteForUpdate)).setContent(note.getContent());
+        notes.get(notes.indexOf(noteForUpdate)).setTitle(note.getTitle());
     }
 
     public Note getById(long id){
